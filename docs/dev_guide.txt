@@ -1,0 +1,93 @@
+h1. Developers Guide to JUnit-Toolkit.
+
+h2. A Brief Introduction.
+
+JUnit Toolkit enhances JUnit with performance testing, asymptotic behaviour analysis, and concurrency testing. It provides a test runner that enables a test to be run multiple times, in multiple threads, for a fixed duration and/or with different 'size' parameters. The concurrency and size parameters may also be ramped-up to examine performance degredation under increasing load. All these options are available using a concise command line syntax. Timing results are output into a comma seperated values file which is suitable for loading with popular spreadsheets for further analysis and graphing of results. It is possible to graph asymptotic behaviour, for example, of data structures under increasing size. It is possible to graph latency of test timings against total throughput, to examine latency versus load, and so on. Timing results are output into files with time stamps in their names. This means later runs do not overwrite earlier results. Historical timing results can be kept as development progresses so that performance improvements can be measured. Test parameters are output into the timing results files, so that they are remembered, and possibly reproduceable. In short, it provides a framework to make performance testing more scientific. One advantage of this tool is that effort invested in writing unit tests can often be harvested to produce performance tests because this tool extends JUnit and its test runner is backward compatible with existing JUnit tests.
+
+* Extends JUnit, can turn ordinary JUnit tests into timed performance tests with little effort.
+* Provides an extended test runner that can take advantage of more advanced features.
+* Has a Maven 2 plugin, that can run tests or generate test scripts to run them from the command line.
+* Provides an asymptotic test case, that can be extended to produce tests parameterized over an integer 'size' parameter.
+* Provides a timing controller call-back interface that tests can use to gain more control over the test timings. This is particularly usefull for timing asynchronous tests, where the code instigating events to be timed is in a different thread to the code taking event timings.
+* Provides a rich command line syntax for setting test parameters and controlling concurrency and test durations.
+* Can be used to measure throughput.
+* Can be used to measure latency.
+* Enables scaling of tests concurrent within a single JVM (and in the future accross many machines).
+
+h2. The Command Line.
+
+To invoke the extended test runner, use the following command line:
+
+> java -cp junit-toolkit.jar (+ your classpath) com.thesett.junit.extensions.TKTestRunner \[command line options\] your.test.class.Here \[additional property values\]
+
+The following command line options are available:
+
+-c pattern  The number of tests to run concurrently.
+-r num      The number of times to repeat each test.
+-d duration The length of time to run the tests for.
+-t name     The name of the test case to execute.
+-s pattern  The size parameter to run tests with.
+-o dir      The name of the directory to output test timings to.
+
+The pattern arguments are of the form \[lowest(, ...)(, highest)\](,sample=s)(,exp), where round brackets enclose optional values. Using this pattern form it is possible to specify a single value, a range of values divided into s samples, a range of values divided into s samples but distributed exponentially, or a fixed set of samples.
+
+Here are some examples:
+
+ -c \[10,20,30,40,50\]  Runs the test with 10,20,...,50 threads. 
+ -s \[1,100\],samples=10  Runs the test with ten different size parameters evenly spaced between 1 and 100. 
+ -s \[1,1000000\],samples=10,exp  Runs the test with ten different size parameters exponentially spaced between 1 and 1000000. 
+ -r 10  Runs each test ten times. 
+ -d 10H  Runs the test repeatedly for 10 hours. 
+ -d 1M, -r 10  Runs the test repeatedly for 1 minute but only takes a timing sample every 10 test runs. 
+-r 10, -c \[1, 5, 10, 50\], -s \[100, 1000, 10000\]  Runs 12 test cycles (4 concurrency samples * 3 size sample), with 10 repeats each. In total the test will be run 199 times (3 + 15 + 30 + 150) 
+
+h2. The Maven 2 Plugin.
+
+Here is an example of how to configure the Maven 2 plugin:
+
+{noformat}
+<plugin>
+    <groupId>com.thesett</groupId>
+    <artifactId>junit-toolkit-maven-plugin</artifactId>
+    
+    <configuration>
+        <scriptOutDirectory>target</scriptOutDirectory>
+        <testJar>$\{project.build.finalName\}-all-test-deps.jar</testJar>
+        <systemproperties>
+            <property>
+                <name>-Xms</name>
+                <value>256m</value>
+            </property>
+        </systemproperties>
+
+        <commands>
+            <!-- Example test scripts. -->
+            <My-Test>-n My-Test -s\[1\] -r 1 -t testExample -o . you.test.class.here.MyTestPerf</My-Test>
+
+            <!-- Add more here... -->
+        </commands>
+    </configuration>
+</plugin>
+{noformat}
+
+The -all-test-deps.jar is an all-in-one or manifest only jar that has been created to include or include in its classpath all of the test dependencies of the project. The following Maven goals are available to use with this plugin:
+
+> mvn com.thesett:junit-toolkit-maven-plugin:tktest
+
+Which runs the test configurations specified by the commands as part of the Maven build.
+
+> mvn com.thesett:junit-toolkit-maven-plugin:tkscriptgen
+
+Which outputs scripts (bash scripts only at the moment, no .bat scripts for windows sorry), in the '/target' directory. These scripts can be called from the command line to run the tests.
+
+h2. Examples.
+
+There are some usage example in the junit-toolkit/src/main/uk/co/thebadgerset/junit/extensions/example directory.
+
+h2. Waiting Room.
+
+The following are ideas of ways in which the JUnit toolkit may be developed in the future.
+
+* Distributed testing. Use JMS to create a test distribution framework. Concurrent tests can be split amongst available test nodes to be run in parallel on seperate machines. Test results collated from the test nodes.
+
+
