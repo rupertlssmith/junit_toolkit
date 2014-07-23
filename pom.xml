@@ -18,6 +18,11 @@
 
     <packaging>jar</packaging>
 
+    <scm>
+        <connection>scm:git:https://github.com/rupertlssmith/junit_toolkit.git</connection>
+        <url>https://github.com/rupertlssmith/junit_toolkit</url>
+    </scm>
+    
     <properties>
         <topdir>${basedir}</topdir>
 
