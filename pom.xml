@@ -7,7 +7,8 @@
     <version>0.9-SNAPSHOT</version><!-- junit_toolkit.version -->
 
     <description>JUnit Toolkit enhances JUnit with performance testing, asymptotic behaviour analysis, and concurrency testing.</description>
-
+    <url>https://github.com/rupertlssmith/junit_toolkit</url>
+    
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
@@ -22,6 +23,16 @@
         <connection>scm:git:https://github.com/rupertlssmith/junit_toolkit.git</connection>
         <url>https://github.com/rupertlssmith/junit_toolkit</url>
     </scm>
+
+    <developers>
+        <developer>
+            <name>Rupert Smith</name>
+            <id>rupert</id>
+            <email>rupertgithub@badgerhouse.freeserve.co.uk</email>
+            <organization>The Sett Ltd.</organization>
+            <organizationUrl>http://www.thesett.com/</organizationUrl>
+        </developer>
+    </developers>
     
     <properties>
         <topdir>${basedir}</topdir>
