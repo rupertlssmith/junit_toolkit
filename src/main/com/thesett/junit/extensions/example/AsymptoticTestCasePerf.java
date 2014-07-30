@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,13 +20,13 @@ import java.util.Map;
 import java.util.Random;
 import java.util.TreeMap;
 
-import com.thesett.junit.extensions.AsymptoticTestCase;
-import com.thesett.junit.extensions.AsymptoticTestDecorator;
-
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.apache.log4j.Logger;
+
+import com.thesett.junit.extensions.AsymptoticTestCase;
+import com.thesett.junit.extensions.AsymptoticTestDecorator;
 
 /**
  * AsymptoticTestCasePerf is a performance test to test and demonstrate the capabilities of the

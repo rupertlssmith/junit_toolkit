@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,6 @@ import junit.framework.TestResult;
 import junit.runner.Version;
 import junit.textui.ResultPrinter;
 import junit.textui.TestRunner;
-
-import org.apache.log4j.Logger;
 
 /**
  * The {@link junit.textui.TestRunner} does not provide very good error handling. It does not wrap exceptions and does

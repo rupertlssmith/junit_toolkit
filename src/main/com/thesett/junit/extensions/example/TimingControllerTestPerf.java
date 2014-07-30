@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,14 +15,14 @@
  */
 package com.thesett.junit.extensions.example;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
+
 import com.thesett.common.throttle.SleepThrottle;
 import com.thesett.common.throttle.Throttle;
 import com.thesett.junit.extensions.AsymptoticTestCase;
 import com.thesett.junit.extensions.TimingController;
 import com.thesett.junit.extensions.TimingControllerAware;
-
-import junit.framework.Test;
-import junit.framework.TestSuite;
 
 /**
  * Tests the use of the timing controller interface to output additional test timings from a single test method. There

@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,13 +18,13 @@ package com.thesett.junit.extensions.example;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import junit.framework.TestCase;
+
 import com.thesett.common.throttle.SleepThrottle;
 import com.thesett.common.throttle.Throttle;
 import com.thesett.junit.extensions.TestThreadAware;
 import com.thesett.junit.extensions.TimingController;
 import com.thesett.junit.extensions.TimingControllerAware;
-
-import junit.framework.TestCase;
 
 /**
  * ContinuousTestPerf is an example of a self-timed test case that runs continuously, until it is told to stop. This is

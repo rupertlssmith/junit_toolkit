@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,13 +15,13 @@
  */
 package com.thesett.junit.extensions.example;
 
-import com.thesett.junit.extensions.AsymptoticTestCase;
-import com.thesett.junit.extensions.TestThreadAware;
-
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
 import org.apache.log4j.Logger;
+
+import com.thesett.junit.extensions.AsymptoticTestCase;
+import com.thesett.junit.extensions.TestThreadAware;
 
 /**
  * TestThreadAwareTestPerf gives an example of usgin the thread aware interface to perform per thread setups and

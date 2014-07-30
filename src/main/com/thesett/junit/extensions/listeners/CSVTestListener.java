@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,15 +24,13 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.TreeSet;
 
-import com.thesett.common.util.concurrent.ShutdownHookable;
-import com.thesett.junit.extensions.util.TestContextProperties;
-
 import junit.framework.AssertionFailedError;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestListener;
 
-import org.apache.log4j.Logger;
+import com.thesett.common.util.concurrent.ShutdownHookable;
+import com.thesett.junit.extensions.util.TestContextProperties;
 
 /**
  * CSVTestListener is both a test listener, a timings listener, a memory listener and a parameter listener. It listens

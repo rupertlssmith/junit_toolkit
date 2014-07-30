@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,13 +26,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import com.thesett.common.util.concurrent.ShutdownHookable;
-
 import junit.framework.AssertionFailedError;
 import junit.framework.Test;
 import junit.framework.TestCase;
 
-import org.apache.log4j.Logger;
+import com.thesett.common.util.concurrent.ShutdownHookable;
 
 /**
  * Listens for test results for a named test and outputs these in the standard JUnit XML format to the specified writer.

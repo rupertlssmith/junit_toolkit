@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,13 +19,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Properties;
 
-import com.thesett.junit.extensions.listeners.TKTestListener;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestResult;
 
-import org.apache.log4j.Logger;
+import com.thesett.junit.extensions.listeners.TKTestListener;
 
 /**
  * TKTestResult extends TestResult in order to calculate test timings, to pass the variable integer parameter for

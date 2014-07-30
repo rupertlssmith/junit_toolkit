@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +17,12 @@ package com.thesett.junit.extensions.listeners;
 
 import java.util.Properties;
 
-import com.thesett.common.throttle.SleepThrottle;
-import com.thesett.common.throttle.Throttle;
-
 import junit.framework.AssertionFailedError;
 import junit.framework.Test;
 import junit.framework.TestListener;
+
+import com.thesett.common.throttle.SleepThrottle;
+import com.thesett.common.throttle.Throttle;
 
 /**
  * ConsoleTestListener provides feedback to the console, as test timings are taken, by drawing a '.', or an 'E', or an

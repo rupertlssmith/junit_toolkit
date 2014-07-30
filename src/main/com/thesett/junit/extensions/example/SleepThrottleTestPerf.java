@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
  */
 package com.thesett.junit.extensions.example;
 
-import com.thesett.common.throttle.SleepThrottle;
-import com.thesett.common.throttle.Throttle;
-
 import junit.framework.Test;
 import junit.framework.TestSuite;
+
+import com.thesett.common.throttle.SleepThrottle;
+import com.thesett.common.throttle.Throttle;
 
 /**
  * Provides a {@link SleepThrottle} to test run with the accuracy tests in {@link ThrottleTestPerfBase}.

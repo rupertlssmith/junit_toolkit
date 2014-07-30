@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,12 +18,12 @@ package com.thesett.junit.extensions;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.thesett.common.util.concurrent.ShutdownHookable;
-
 import junit.framework.Test;
 import junit.framework.TestResult;
 
 import org.apache.log4j.Logger;
+
+import com.thesett.common.util.concurrent.ShutdownHookable;
 
 /**
  * A test decorator that runs a test repeatedly until a specified length of time has passed.

@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,11 +15,7 @@
  */
 package com.thesett.junit.extensions;
 
-import com.thesett.junit.extensions.util.MathUtils;
-
 import junit.framework.TestResult;
-
-import org.apache.log4j.Logger;
 
 /**
  * A Decorator that runs a test repeatedly on an increasing int parameter, or for a fixed number of repeats. If both a

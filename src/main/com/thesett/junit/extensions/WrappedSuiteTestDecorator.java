@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,8 +22,6 @@ import java.util.List;
 import junit.extensions.TestDecorator;
 import junit.framework.Test;
 import junit.framework.TestSuite;
-
-import org.apache.log4j.Logger;
 
 /**
  * WrappedSuiteTestDecorator is a test decorator that wraps a test suite, or another wrapped suite, but provides the

@@ -1,5 +1,5 @@
 /*
- * Copyright Rupert Smith, 2005 to 2008.
+ * Copyright The Sett Ltd, 2005 to 2014.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,16 +15,16 @@
  */
 package com.thesett.junit.extensions.example;
 
+import junit.framework.Test;
+import junit.framework.TestSuite;
+
+import org.apache.log4j.Logger;
+
 import com.thesett.common.properties.ParsedProperties;
 import com.thesett.junit.extensions.AsymptoticTestCase;
 import com.thesett.junit.extensions.TestThreadAware;
 import com.thesett.junit.extensions.util.TestContextProperties;
 import com.thesett.junit.extensions.util.TestUtils;
-
-import junit.framework.Test;
-import junit.framework.TestSuite;
-
-import org.apache.log4j.Logger;
 
 /**
  * TimingExampleTest implements some short pauses that test invocations can try out as dummy test material. The pause
