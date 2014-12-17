@@ -8,7 +8,8 @@ if [ -z "$1" ] ; then
 fi
 
 echo New version is $1
-SEDCMD="s/$CV/$1/"
+SEDCMD="s/<version>$CV<\/version><!-- junit_toolkit.version -->/<version>$1<\/version><!-- junit_toolkit.version -->/"
+SEDCMDCV="s/$CV/$1/"
 
-find . -name 'pom.xml' -exec sed -i -e $SEDCMD {} \;
-sed -i -e $SEDCMD current_version
+find -L . -name 'pom.xml' | xargs sed -i $SEDCMD
+sed -i $SEDCMDCV current_version
