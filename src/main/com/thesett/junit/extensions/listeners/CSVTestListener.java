@@ -370,7 +370,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
             }
             catch (IOException e)
             {
-                throw new RuntimeException("Unable to write out end batch statistics: " + e, e);
+                throw new IllegalStateException("Unable to write out end batch statistics: " + e, e);
             }
         }
 
@@ -407,7 +407,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
         }
         catch (IOException e)
         {
-            throw new RuntimeException("Unable to write out test parameters: " + e, e);
+            throw new IllegalStateException("Unable to write out test parameters: " + e, e);
         }
 
         // Write out the column headers after the properties.
@@ -453,7 +453,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
         }
         catch (IOException e)
         {
-            throw new RuntimeException("Unable to write out column headers: " + e, e);
+            throw new IllegalStateException("Unable to write out column headers: " + e, e);
         }
     }
 
@@ -499,7 +499,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
         }
         catch (IOException e)
         {
-            throw new RuntimeException("Unable to write out test results: " + e, e);
+            throw new IllegalStateException("Unable to write out test results: " + e, e);
         }
     }
 

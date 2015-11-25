@@ -495,7 +495,7 @@ public class TKTestResult extends TestResult
          */
         public long suspend()
         {
-            throw new RuntimeException("Method not implemented.");
+            throw new IllegalStateException("Method not implemented.");
         }
 
         /**
@@ -505,7 +505,7 @@ public class TKTestResult extends TestResult
          */
         public long resume()
         {
-            throw new RuntimeException("Method not implemented.");
+            throw new IllegalStateException("Method not implemented.");
         }
 
         /**

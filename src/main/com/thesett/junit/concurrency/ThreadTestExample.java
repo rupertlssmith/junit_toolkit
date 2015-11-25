@@ -94,7 +94,7 @@ public class ThreadTestExample
                 catch (InterruptedException e)
                 {
                     // Bail-out with a runtime if this happens.
-                    throw new RuntimeException("Interrupted whilst waiting for shared lock.", e);
+                    throw new IllegalStateException("Interrupted whilst waiting for shared lock.", e);
                 }
 
                 log.info("in testThread1, finished waiting on shared lock.");

@@ -415,7 +415,7 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
                 // Check that the decorator is an instance of WrappedSuiteTestDecorator.
                 if (!WrappedSuiteTestDecorator.class.isAssignableFrom(decoratorClass))
                 {
-                    throw new RuntimeException("The decorator class " + decoratorClassName +
+                    throw new IllegalStateException("The decorator class " + decoratorClassName +
                         " is not a sub-class of WrappedSuiteTestDecorator, which it needs to be.");
                 }
 
@@ -429,19 +429,19 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
                             }
                             catch (InstantiationException e)
                             {
-                                throw new RuntimeException(
+                                throw new IllegalStateException(
                                     "The decorator class " + decoratorConstructor.getDeclaringClass().getName() +
                                     " cannot be instantiated.", e);
                             }
                             catch (IllegalAccessException e)
                             {
-                                throw new RuntimeException(
+                                throw new IllegalStateException(
                                     "The decorator class " + decoratorConstructor.getDeclaringClass().getName() +
                                     " does not have a publicly accessable constructor.", e);
                             }
                             catch (InvocationTargetException e)
                             {
-                                throw new RuntimeException(
+                                throw new IllegalStateException(
                                     "The decorator class " + decoratorConstructor.getDeclaringClass().getName() +
                                     " cannot be invoked.", e);
                             }
@@ -450,11 +450,11 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
             }
             catch (ClassNotFoundException e)
             {
-                throw new RuntimeException("The decorator class " + decoratorClassName + " could not be found.", e);
+                throw new IllegalStateException("The decorator class " + decoratorClassName + " could not be found.", e);
             }
             catch (NoSuchMethodException e)
             {
-                throw new RuntimeException("The decorator class " + decoratorClassName +
+                throw new IllegalStateException("The decorator class " + decoratorClassName +
                     " does not have a constructor that accepts a single 'WrappedSuiteTestDecorator' argument.", e);
             }
         }
@@ -635,7 +635,7 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
                 }
                 catch (IOException e)
                 {
-                    throw new RuntimeException("Unable to create the log file to write test results to: " + e, e);
+                    throw new IllegalStateException("Unable to create the log file to write test results to: " + e, e);
                 }
 
                 XMLTestListener listener = new XMLTestListener(timingsWriter, currentTestClassName);
@@ -661,7 +661,7 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
                 }
                 catch (IOException e)
                 {
-                    throw new RuntimeException("Unable to create the log file to write test results to: " + e, e);
+                    throw new IllegalStateException("Unable to create the log file to write test results to: " + e, e);
                 }
 
                 CSVTestListener listener = new CSVTestListener(timingsWriter);

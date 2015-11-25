@@ -306,7 +306,7 @@ public class XMLTestListener implements TKTestListener, ShutdownHookable
         }
         catch (IOException e)
         {
-            throw new RuntimeException("Unable to write the test results.", e);
+            throw new IllegalStateException("Unable to write the test results.", e);
         }
     }
 
@@ -351,7 +351,7 @@ public class XMLTestListener implements TKTestListener, ShutdownHookable
         }
         catch (IOException e)
         {
-            throw new RuntimeException("Unable to write the test results.", e);
+            throw new IllegalStateException("Unable to write the test results.", e);
         }
     }
 

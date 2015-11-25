@@ -455,7 +455,7 @@ public class ThreadTestCoordinator
                 // deal with this possibility. It will very likely spoil the test which is relying on the wait
                 // condition to be properly fulfilled in order to force some condition. Throwing a runtime here should
                 // cause the test to fail because of it.
-                throw new RuntimeException("Thread + " + callerId +
+                throw new IllegalStateException("Thread + " + callerId +
                     " was interrupted whilst waiting on the coordinator lock.", e);
             }
 
