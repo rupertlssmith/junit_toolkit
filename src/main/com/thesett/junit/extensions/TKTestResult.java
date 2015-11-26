@@ -388,7 +388,7 @@ public class TKTestResult extends TestResult
      *
      * @param test The test to run.
      */
-    protected void run(final TestCase test)
+    protected void run(TestCase test)
     {
         // log.debug("protected void run(final TestCase test): called");
 
