@@ -153,7 +153,7 @@ public class TKTestResult extends TestResult
         if (test instanceof TimingControllerAware)
         {
             TimingControllerAware controllerAware = (TimingControllerAware) test;
-            TimingControllerImpl controller =
+            TimingController controller =
                 new TimingControllerImpl(this, test, startTime, Thread.currentThread().getId());
             controllerAware.setTimingController(controller);
 

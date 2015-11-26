@@ -29,6 +29,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.thesett.junit.extensions.listeners.TKTestListener;
 import junit.framework.Test;
 import junit.framework.TestResult;
 import junit.framework.TestSuite;
@@ -621,7 +622,7 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
             Writer timingsWriter;
 
             // Always set up a console feedback listener.
-            ConsoleTestListener feedbackListener = new ConsoleTestListener();
+            TKTestListener feedbackListener = new ConsoleTestListener();
             result.addListener(feedbackListener);
             result.addTKTestListener(feedbackListener);
 

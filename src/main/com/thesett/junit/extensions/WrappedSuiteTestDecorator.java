@@ -107,11 +107,11 @@ public class WrappedSuiteTestDecorator extends TestDecorator
      *
      * @return All the tests from the underlying test suite.
      */
-    public Collection<Test> getAllUnderlyingTests()
+    public Iterable<Test> getAllUnderlyingTests()
     {
         /*log.debug("public Collection<Test> getAllUnderlyingTests(): called");*/
 
-        List<Test> tests = new ArrayList<Test>();
+        Collection<Test> tests = new ArrayList<Test>();
 
         int numTests = countTestCases();
         /*log.debug("numTests = " + numTests);*/

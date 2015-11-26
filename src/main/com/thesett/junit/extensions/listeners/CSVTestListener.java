@@ -392,7 +392,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
         {
             synchronized (this.getClass())
             {
-                Set keySet = new TreeSet(properties.keySet());
+                Iterable keySet = new TreeSet(properties.keySet());
 
                 // timingsWriter.write("\n");
 

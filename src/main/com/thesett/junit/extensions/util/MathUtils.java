@@ -16,6 +16,7 @@
 package com.thesett.junit.extensions.util;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -220,7 +221,7 @@ public class MathUtils
      *
      * @return The sequence as a fully expanded int array.
      */
-    public static int[] parseSequence(String sequenceDef)
+    public static int[] parseSequence(CharSequence sequenceDef)
     {
         // Match the sequence definition against the regular expression for sequences.
         Matcher matcher = SEQUENCE_PATTERN.matcher(sequenceDef);
@@ -294,7 +295,7 @@ public class MathUtils
      *
      * @return The duration in millliseconds.
      */
-    public static long parseDuration(String duration)
+    public static long parseDuration(CharSequence duration)
     {
         // Match the duration against the regular expression.
         Matcher matcher = DURATION_PATTERN.matcher(duration);
@@ -424,7 +425,7 @@ public class MathUtils
      * @param result The list of integers to add to.
      * @param value  The new candidate to round and add to the list.
      */
-    private static void roundAndAdd(List<Integer> result, double value)
+    private static void roundAndAdd(Collection<Integer> result, double value)
     {
         int roundedValue = (int) Math.round(value);
 

@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -84,7 +85,7 @@ public class XMLTestListener implements TKTestListener, ShutdownHookable
      * Holds results for tests that have ended. Transferring these results here from the per-thread results map, means
      * that the thread id is freed for the thread to generate more results.
      */
-    final List<Result> results = new ArrayList<Result>();
+    final Collection<Result> results = new ArrayList<Result>();
 
     /** Holds the overall error count. */
     protected int errors = 0;
