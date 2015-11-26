@@ -112,28 +112,28 @@ public interface TimingController
      *
      * @return The timing controller associated with the current test thread.
      */
-    public TimingController getControllerForCurrentThread();
+    TimingController getControllerForCurrentThread();
 
     /**
      * Suspends the test timer.
      *
      * @return The current time in nanoseconds.
      */
-    public long suspend();
+    long suspend();
 
     /**
      * Allows the test timer to continue running after a suspend.
      *
      * @return The current time in nanoseconds.
      */
-    public long resume();
+    long resume();
 
     /**
      * Completely restarts the test timer from zero.
      *
      * @return The current time in nanoseconds.
      */
-    public long restart();
+    long restart();
 
     /**
      * Register an additional pass/fail for the current test. The test result is assumed to apply to a test of 'size'
@@ -144,7 +144,7 @@ public interface TimingController
      * @throws InterruptedException If the test runner decides that testing should stop it throws this exception to
      *                              indicate to the test method that it should stop immediately.
      */
-    public void completeTest(boolean testPassed) throws InterruptedException;
+    void completeTest(boolean testPassed) throws InterruptedException;
 
     /**
      * Register an additional pass/fail for the current test. The test result is applies to a test of the specified
@@ -156,7 +156,7 @@ public interface TimingController
      * @throws InterruptedException If the test runner decides that testing should stop it throws this exception to
      *                              indicate to the test method that it should stop immediately.
      */
-    public void completeTest(boolean testPassed, int param) throws InterruptedException;
+    void completeTest(boolean testPassed, int param) throws InterruptedException;
 
     /**
      * Register an additional pass/fail for the current test. The test result is applies to a test of the specified
@@ -169,5 +169,5 @@ public interface TimingController
      * @throws InterruptedException If the test runner decides that testing should stop it throws this exception to
      *                              indicate to the test method that it should stop immediately.
      */
-    public void completeTest(boolean testPassed, int param, long timeNanos) throws InterruptedException;
+    void completeTest(boolean testPassed, int param, long timeNanos) throws InterruptedException;
 }

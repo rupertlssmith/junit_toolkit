@@ -46,7 +46,7 @@ public interface TKTestListener extends TestListener
      * @param test     The test to resest any results for.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void reset(Test test, Long threadId);
+    void reset(Test test, Long threadId);
 
     /**
      * Should be called every time a test completes with the run time of that test.
@@ -55,7 +55,7 @@ public interface TKTestListener extends TestListener
      * @param nanos    The run time of the test in nanoseconds.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void timing(Test test, long nanos, Long threadId);
+    void timing(Test test, long nanos, Long threadId);
 
     /**
      * Should be called every time a test completed with the amount of memory used before and after the test was run.
@@ -65,7 +65,7 @@ public interface TKTestListener extends TestListener
      * @param memEnd   The total JVM memory used after the test was run.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void memoryUsed(Test test, long memStart, long memEnd, Long threadId);
+    void memoryUsed(Test test, long memStart, long memEnd, Long threadId);
 
     /**
      * Should be called every time a parameterized test completed with the int value of its test parameter.
@@ -74,7 +74,7 @@ public interface TKTestListener extends TestListener
      * @param parameter The int parameter value.
      * @param threadId  Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void parameterValue(Test test, int parameter, Long threadId);
+    void parameterValue(Test test, int parameter, Long threadId);
 
     /**
      * Should be called every time a test completes with the current number of test threads running.
@@ -83,7 +83,7 @@ public interface TKTestListener extends TestListener
      * @param threads  The number of tests being run concurrently.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void concurrencyLevel(Test test, int threads, Long threadId);
+    void concurrencyLevel(Test test, int threads, Long threadId);
 
     /**
      * Called when a test completes. Success, failure and errors. This method should be used when registering an end
@@ -92,7 +92,7 @@ public interface TKTestListener extends TestListener
      * @param test     The test which completed.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void endTest(Test test, Long threadId);
+    void endTest(Test test, Long threadId);
 
     /**
      * Called when a test completes to mark it as a test fail. This method should be used when registering a failure
@@ -102,22 +102,22 @@ public interface TKTestListener extends TestListener
      * @param e        The assertion that failed the test.
      * @param threadId Optional thread id if not calling from thread that started the test method. May be null.
      */
-    public void addFailure(Test test, AssertionFailedError e, Long threadId);
+    void addFailure(Test test, AssertionFailedError e, Long threadId);
 
     /** Notifies listeners of the start of a complete run of tests. */
-    public void startBatch();
+    void startBatch();
 
     /**
      * Notifies listeners of the end of a complete run of tests.
      *
      * @param parameters The optional test parameters to log out with the batch results.
      */
-    public void endBatch(Properties parameters);
+    void endBatch(Properties parameters);
 
     /**
      * Notifies listeners of the tests read/set properties.
      *
      * @param properties The tests read/set properties.
      */
-    public void properties(Properties properties);
+    void properties(Properties properties);
 }

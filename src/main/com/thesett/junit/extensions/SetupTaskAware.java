@@ -39,12 +39,12 @@ public interface SetupTaskAware
      *
      * @param task The task to add to the tests setup.
      */
-    public void chainSetupTask(Runnable task);
+    void chainSetupTask(Runnable task);
 
     /**
      * Adds the specified task to the tests tear down.
      *
      * @param task The task to add to the tests tear down.
      */
-    public void chainTearDownTask(Runnable task);
+    void chainTearDownTask(Runnable task);
 }

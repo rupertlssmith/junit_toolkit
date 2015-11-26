@@ -34,5 +34,5 @@ public interface TimingControllerAware
      *
      * @param controller The timing controller.
      */
-    public void setTimingController(TimingController controller);
+    void setTimingController(TimingController controller);
 }

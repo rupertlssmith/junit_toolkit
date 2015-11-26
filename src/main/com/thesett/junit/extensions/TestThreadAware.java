@@ -33,8 +33,8 @@ package com.thesett.junit.extensions;
 public interface TestThreadAware
 {
     /** Called when a test thread is created. */
-    public void threadSetUp();
+    void threadSetUp();
 
     /** Called when a test thread is destroyed. */
-    public void threadTearDown();
+    void threadTearDown();
 }

@@ -37,25 +37,25 @@ public interface InstrumentedTest extends Test
      *
      * @return The time in milliseconds that the test took to run.
      */
-    public long getTestTime();
+    long getTestTime();
 
     /**
      * Reports the memory usage at the start of the test.
      *
      * @return The memory usage at the start of the test.
      */
-    public long getTestStartMemory();
+    long getTestStartMemory();
 
     /**
      * Reports the memory usage at the end of the test.
      *
      * @return The memory usage at the end of the test.
      */
-    public long getTestEndMemory();
+    long getTestEndMemory();
 
     /**
      * Resets the instrumentation values to zero, and nulls any references to held measurements so that the memory can
      * be reclaimed.
      */
-    public void reset();
+    void reset();
 }
