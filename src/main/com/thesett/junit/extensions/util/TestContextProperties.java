@@ -49,7 +49,7 @@ import com.thesett.common.properties.ParsedProperties;
 public class TestContextProperties extends ParsedProperties
 {
     /** The singleton instance of the test context properties. */
-    private static TestContextProperties singleton = null;
+    private static TestContextProperties singleton;
 
     /** Used for debugging. */
     // Logger log = Logger.getLogger(TestContextProperties.class);

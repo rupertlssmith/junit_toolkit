@@ -88,13 +88,13 @@ public class XMLTestListener implements TKTestListener, ShutdownHookable
     final Collection<Result> results = new ArrayList<Result>();
 
     /** Holds the overall error count. */
-    protected int errors = 0;
+    protected int errors;
 
     /** Holds the overall failure count. */
-    protected int failures = 0;
+    protected int failures;
 
     /** Holds the overall tests run count. */
-    protected int runs = 0;
+    protected int runs;
 
     /** Holds the name of the class that tests are being run for. */
     final String testClassName;

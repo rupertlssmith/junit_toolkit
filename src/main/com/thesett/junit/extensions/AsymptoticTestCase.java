@@ -286,15 +286,15 @@ public class AsymptoticTestCase extends TestCase implements InstrumentedTest
         public int n = 1;
 
         /** Holds the test start memory. */
-        public long startTime = 0;
+        public long startTime;
 
         /** Holds the test end memory. */
-        public long endTime = 0;
+        public long endTime;
 
         /** Holds the test start memory. */
-        public long startMem = 0;
+        public long startMem;
 
         /** Holds the test end memory. */
-        public long endMem = 0;
+        public long endMem;
     }
 }

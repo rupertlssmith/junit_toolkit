@@ -61,10 +61,10 @@ public class ConsoleTestListener implements TestListener, TKTestListener
     final Throttle throttle;
 
     /** Tracks the worst test result so far, when the throttled print method must conflate results due to throttling. */
-    private int conflatedResult = 0;
+    private int conflatedResult;
 
     /** Tracks the column count as dots are printed, so that newlines can be inserted at the right margin. */
-    private int columnCount = 0;
+    private int columnCount;
 
     /**
      * Used as a monitor on the print method criticial section, to ensure that line ends always happen in the right

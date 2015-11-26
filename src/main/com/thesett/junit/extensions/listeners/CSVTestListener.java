@@ -97,7 +97,7 @@ public class CSVTestListener implements TestListener, TKTestListener, ShutdownHo
     private long summedTime;
 
     /** Flag to indicate when batch has been started but not ended to ensure end batch stats are output only once. */
-    private boolean batchStarted = false;
+    private boolean batchStarted;
 
     /**
      * Creates a new CSVTestListener object.

@@ -163,22 +163,22 @@ public class TKTestRunner extends TestRunnerImprovedErrorHandling
     protected final int[] threads;
 
     /** Delay in ms to wait between two test cases. */
-    protected int delay = 0;
+    protected int delay;
 
     /** The parameter values to pass to parameterized tests. */
     protected final int[] params;
 
     /** Name of the single test case to execute. */
-    protected String testCaseName = null;
+    protected String testCaseName;
 
     /** Name of the test class. */
-    protected String testClassName = null;
+    protected String testClassName;
 
     /** Name of the test run. */
-    protected String testRunName = null;
+    protected String testRunName;
 
     /** Directory to output XML reports into, if specified. */
-    protected String reportDir = null;
+    protected String reportDir;
 
     /** Flag that indicates the CSV results listener should be used to output results. */
     protected final boolean csvResults;

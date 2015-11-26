@@ -62,7 +62,7 @@ public class ScaledTestDecorator extends WrappedSuiteTestDecorator implements Sh
     private TKTestResult currentTestResult;
 
     /** Flag set by the shutdown hook. This decorator will not start any new tests when this is set. */
-    private boolean shutdown = false;
+    private boolean shutdown;
 
     /**
      * Creates an active test with default multiplier (1).

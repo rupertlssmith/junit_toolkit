@@ -62,14 +62,14 @@ public class TKTestResult extends TestResult
     /*private static final Logger log = Logger.getLogger(TKTestResult.class);*/
 
     /** The delay between two tests. */
-    private int delay = 0;
+    private int delay;
 
     /**
      * This flag indicates that the #completeTest method of the timing controller has been called. Once this has been
      * called once, the end test event for the whole test method should be ignored because tests have taken charge of
      * outputing their own timings.
      */
-    private boolean completeTestUsed = false;
+    private boolean completeTestUsed;
 
     /**
      * Thread locals to hold test start time for non-instrumented tests. (Instrumented tests hold their own measurement
@@ -91,7 +91,7 @@ public class TKTestResult extends TestResult
     private int concurrencyLevel = 1;
 
     /** Flag used to indicate that this test result should attempt to complete its current tests as soon as possible. */
-    private boolean shutdownNow = false;
+    private boolean shutdownNow;
 
     /** Holds the parametes that the test is run with. */
     private Properties testParameters;

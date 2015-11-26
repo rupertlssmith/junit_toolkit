@@ -52,7 +52,7 @@ public class DurationTestDecorator extends WrappedSuiteTestDecorator implements 
     private long duration;
 
     /** Flag set by the shutdown hook. This decorator will not start any new tests when this is set. */
-    private boolean shutdown = false;
+    private boolean shutdown;
 
     /**
      * Creates an active test with default multiplier (1).

@@ -74,7 +74,7 @@ public class ThreadTestCoordinator
     private boolean[][] allowEvents;
 
     /** Keeps track of the number of threads being coordinated. */
-    private int threadCount = 0;
+    private int threadCount;
 
     /** Accumulates any exceptions resulting from the threads run methods. */
     private final Collection<Exception> exceptions = new ArrayList<Exception>();

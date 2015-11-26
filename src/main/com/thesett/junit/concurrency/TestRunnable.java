@@ -70,7 +70,7 @@ public abstract class TestRunnable implements Runnable
     private int id;
 
     /** Used to indicate that this thread is waiting on the coordinator and not elsewhere. */
-    private boolean waitingOnCoordinator = false;
+    private boolean waitingOnCoordinator;
 
     /** Used to accumulate error messsages. */
     private String errorMessage = "";
@@ -79,7 +79,7 @@ public abstract class TestRunnable implements Runnable
     private Thread thisThread;
 
     /** Used to hold any exceptions resulting from the run method. */
-    private Exception runException = null;
+    private Exception runException;
 
     /**
      * Implementations override this to perform coordinated thread sequencing.
