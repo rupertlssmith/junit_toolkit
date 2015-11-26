@@ -37,10 +37,10 @@ public class ParameterVariationTestDecorator extends WrappedSuiteTestDecorator
     /*private static final Logger log = Logger.getLogger(ParameterVariationTestDecorator.class);*/
 
     /** The int size parameters to run the test with. */
-    private int[] params;
+    private final int[] params;
 
     /** The number of times the whole test should be repeated. */
-    private int repeat;
+    private final int repeat;
 
     /**
      * Creates an asymptotic test decorator that wraps a test with repeats and a set of integer 'size' paramters to call
