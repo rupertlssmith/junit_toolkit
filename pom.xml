@@ -4,7 +4,7 @@
     <groupId>com.thesett</groupId>
     <artifactId>junit-toolkit</artifactId>
     <name>JUnit Toolkit</name>
-    <version>0.9.0-SNAPSHOT</version><!--junit_toolkit.version-->
+    <version>0.9.116</version><!--junit_toolkit.version-->
 
     <description>JUnit Toolkit enhances JUnit with performance testing, asymptotic behaviour analysis, and concurrency testing.</description>
     <url>https://github.com/rupertlssmith/junit_toolkit</url>
